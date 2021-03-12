@@ -58,8 +58,9 @@ button {
   border: none;
   outline: none;
   background-color: #d62828;
-  font-size: 1.3rem;
-  padding: 0.5rem;
+  font-size: 1rem;
+  padding: 0.8rem;
+  letter-spacing: 2px;
   border-radius: 16px;
   width: 8rem;
   cursor: pointer;
@@ -85,6 +86,7 @@ section {
   margin-right: 1rem;
   cursor: pointer;
   font-weight: normal;
+  letter-spacing: 0;
 }
 
 button:hover {
@@ -218,7 +220,7 @@ option {
     width: 100vw;
   }
   button {
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
   }
   .App {
     flex-direction: column;
@@ -237,7 +239,7 @@ option {
   .welcome-container {
     width: 90%;
     margin-bottom: 3rem;
-    padding: 1rem 0.6rem 1rem 0.6rem;
+    padding: 1rem;
     flex: 1;
   }
   .options {
