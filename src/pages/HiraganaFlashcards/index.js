@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import FlashcardContainer from "./components/FlashcardContainer";
-import Form from "./components/Form"
+import FlashcardContainer from "../../components/FlashcardContainer";
+import Form from "../../components/Form"
 
 function App() {
 

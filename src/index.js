@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './pages/HiraganaFlashcards';
+import Welcome from "./pages/Welcome"
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route} from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Route exact path="/" component={Welcome}/>
+    <Route exact path="/Flashcards" component={App}/>
+  </Router>,
   document.getElementById('root')
 );
 
