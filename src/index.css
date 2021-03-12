@@ -54,12 +54,11 @@ p {
 }
 button {
   margin-top: 1rem;
-  font-weight: bold;
   color: rgb(255, 255, 255, 0.8);
   border: none;
   outline: none;
   background-color: #d62828;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding: 0.5rem;
   border-radius: 16px;
   width: 8rem;
@@ -254,6 +253,10 @@ option {
 
   .select {
     margin: 0 0.25rem 0 0;
+  }
+
+  .goodluck {
+    margin: 0.5rem;
   }
 
 }
