@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  color: #fff;
+  font-family: 'Fredoka One', Courier, monospace;
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 1.5rem;
+  text-align: right;
+}
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-image: linear-gradient(#fcbf49, #ffd277);
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+}
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+}
+.flashcard-container {
+  background-color: rgb(255, 255, 255, 0.5);
+  margin: 1rem;
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 16px;
+  flex-wrap: wrap;
+  width: fit-content;
+}
+
+.flashcard-container .flashcard {
+  position: relative;
+  margin: 0.3rem;
+  font-size: 2rem;
+  height: 6rem;
+  width: 5rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d62828;
+  color: #FFF;
+  border-radius: 10px;
+  perspective: 1000px;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.29);
+  -webkit-box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.29);
+  -moz-box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.29);
+
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0)) translateX(var(--translate-x, 0));
+  transform-style: preserve-3d;
+  transition: 500ms;
+
+}
+
+.flashcard:hover{
+  --translate-y: 0.2rem;
+  --translate-x: 0.2rem;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+  -moz-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.flashcard .front, .flashcard .back {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.flashcard .back {
+  transform: rotateY(180deg);
+  font-size: 1.3rem;
+}
+
+.flipped {
+  background-color: #003049 !important;
+  box-shadow: -3px 3px 3px 2px rgba(0,0,0,0.29) !important;
+  -webkit-box-shadow: -3px 3px 3px 2px rgba(0,0,0,0.29) !important;
+  -moz-box-shadow: -3px 3px 3px 2px rgba(0,0,0,0.29) !important;
+  --rotate-y: 180deg;
+}
+
+select {
+  display: block;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 100%;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.select {
+  width: fit-content;
+  padding: 1rem;
+  background-color: rgb(247, 127, 0, 0.5);
+  border-radius: 10px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+option {
+  color: black;
+}
+@media (max-width: 600px) {
+  body {
+    display: block;
+  }
+  h1 {
+    padding: 4rem 1.5rem 1.5rem 1.5rem;
+  }
+  .App {
+    flex-direction: column;
+    width: 100%;
+  }
+  header {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .select {
+    margin-bottom: 1rem;
+  }
+  .flashcard:hover {
+    --translate-y: 0;
+    --translate-x: 0;
+    box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.29);
+    -webkit-box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.29);
+    -moz-box-shadow: 3px 3px 3px 2px rgba(0,0,0,0.29);
+  }
+}
