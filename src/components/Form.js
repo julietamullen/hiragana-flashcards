@@ -6,7 +6,7 @@ const Form = ({setGroup, setShown, flashcards}) => {
     let randomFlashcards = []
 
     const generateRandom = () => {
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 9; i++) {
         const num = Math.floor(Math.random() * 67)
         arr.push(num)
     }
