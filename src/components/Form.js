@@ -1,14 +1,37 @@
 import React from "react"
 
-const Form = ({setGroup}) => {
+const Form = ({setGroup, setShown, flashcards}) => {
+
+    let arr = []
+    let randomFlashcards = []
+
+    const generateRandom = () => {
+        for (let i = 0; i < 5; i++) {
+        const num = Math.floor(Math.random() * 67)
+        arr.push(num)
+    }
+
+    let uniques = [...new Set(arr)]
+
+    for (let i = 0; i < flashcards.length; i++) {
+        for (let x = 0; x < uniques.length; x++) {
+        if (flashcards[i].id === uniques[x]) {
+            randomFlashcards.push(flashcards[i])
+        }
+        }
+    }setShown(randomFlashcards)
+    console.log(uniques)
+    }
 
     const handleGroup = (e) => {
         setGroup(e.target.value)
     }
     return(
+        <div className="options">
         <div className="select" onChange={handleGroup}>
             <select name="groups" className="choose-groups">
                 <option value="default">Choose a group</option>
+
                 <option value="vowels">Vowels</option>
                 <option value="k">K Group</option>
                 <option value="k+">K + ﾞ Group</option>
@@ -24,6 +47,9 @@ const Form = ({setGroup}) => {
                 <option value="r">R Group</option>
                 <option value="w">W Group</option>
             </select>
+            
+        </div>
+        <button className="random" onClick={generateRandom}>Random</button>
         </div>
     )
 }
