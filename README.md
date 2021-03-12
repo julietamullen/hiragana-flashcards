@@ -1,4 +1,4 @@
 # Hiragana Flashcards
 
 You can see this deployed at:
-https://hiragana-flashcards-tau.vercel.app/
+https://hiragana-flashcards-sable.vercel.app/
