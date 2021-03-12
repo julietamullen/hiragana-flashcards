@@ -59,7 +59,12 @@ function App() {
     }
   }
 
+  const scrollTo = () => {
+    window.scroll(0, 0)
+  }
+
   useEffect(()=> {handleShown()}, [group])
+  useEffect(()=> {scrollTo()}, [])
 
   return (
     <div className="App">
