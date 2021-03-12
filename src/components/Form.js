@@ -20,7 +20,6 @@ const Form = ({setGroup, setShown, flashcards}) => {
         }
         }
     }setShown(randomFlashcards)
-    console.log(uniques)
     }
 
     const handleGroup = (e) => {
