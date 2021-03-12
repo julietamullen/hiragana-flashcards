@@ -9,6 +9,7 @@ function App() {
   const [shown, setShown] = useState([])
 
   const handleShown = () => {
+
     switch(group){
       case "vowels":
         setShown(flashcards.filter(flashcard => flashcard.group === "Vowels"))
@@ -64,7 +65,7 @@ function App() {
     <div className="App">
       <header>
       <h1>Hiragana Flashcards</h1>
-      <Form setGroup={setGroup}/>
+      <Form setGroup={setGroup} flashcards={flashcards} setShown={setShown}/>
       </header>
       <FlashcardContainer flashcards={flashcards} shown={shown}/>
     </div>
