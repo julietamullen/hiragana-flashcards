@@ -47,6 +47,11 @@ p {
   color: rgb(27, 27, 27);
 }
 
+.goodluck {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
 button {
   margin-top: 1rem;
   font-weight: bold;
@@ -205,6 +210,7 @@ option {
     display: block;
   }
   h1 {
+    margin: auto;
     padding: 2.5rem 1.5rem 1.5rem 1.5rem;
   }
   header {
