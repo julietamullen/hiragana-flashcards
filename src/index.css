@@ -156,6 +156,7 @@ button:hover {
 }
 
 .flashcard:hover{
+  cursor: pointer;
   --translate-y: 0.2rem;
   --translate-x: 0.2rem;
   box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.5);
