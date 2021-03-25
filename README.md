@@ -1,3 +1,6 @@
+**npm i**
+**npm run start**
+
 # Hiragana Flashcards
 ![Deployment Image](/public/flashcards.png)
 
