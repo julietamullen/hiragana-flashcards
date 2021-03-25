@@ -1,5 +1,5 @@
 # Hiragana Flashcards
-![Deployment Image](/public/hiragana.png)
+![Deployment Image](/public/flashcards.png)
 
 You can see this deployed at:
 https://hiragana-flashcards-seven.vercel.app/
